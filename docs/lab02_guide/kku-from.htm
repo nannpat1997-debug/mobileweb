@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../css/index.css" rel="stylesheet">
+    <style>
+        .form-section {
+            background-color: #f5eee8; /* พื้นหลังสีเขียวอ่อน */
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* เงาที่ดูมีมิติ */
+        }
+
+        .form-section h2 {
+            color: #004d40;
+            text-align: center;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #ffab00;
+            padding-bottom: 0.5rem;
+        }
+
+        .suggestion-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* ระยะห่างระหว่าง Form Group */
+            padding: 15px;
+            background: white;
+            border-radius: 6px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="url"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            box-sizing: border-box; /* สำคัญ: เพื่อให้ padding ไม่ขยายความกว้าง */
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #ffab00;
+            box-shadow: 0 0 5px rgba(255, 171, 0, 0.5);
+            outline: none;
+        }
+
+        .submit-button {
+            background-color: #004d40;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #00796b;
+        }
+
+       
+        @media (max-width: 600px) {
+            .form-section {
+                padding: 20px;
+            }
+            .form-group textarea {
+                rows: 4; /* ลดความสูงของ textarea บนมือถือ */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="haed">
+                <img src="../img/cropped-1.-official-logo-2022-26-scaled-1 (1).png" alt="logo">
+                <h2>KKU Campus Guide</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">หน้าหลัก</a></li>
+                    <li><a href="kku-from.htm">สถานที่แนะนำ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="suggest-form" class="container form-section">
+            <h2>💡 แนะนำสถานที่ใหม่ใน KKU 💡</h2>
+            <p>ช่วยพวกเราค้นหามุมโปรดใหม่ ๆ ของมหาวิทยาลัยขอนแก่น กรุณากรอกข้อมูลสถานที่ที่คุณอยากแนะนำ:</p>
+            
+            <form action="#" method="POST" class="suggestion-form">
+                <div class="form-group">
+                    <label for="place-name">ชื่อสถานที่ที่ต้องการแนะนำ:</label>
+                    <input type="text" id="place-name" name="placeName" required placeholder="เช่น ศูนย์ศิลปวัฒนธรรม หรือ สวนกัลปพฤกษ์">
+                </div>
+
+                <div class="form-group">
+                    <label for="place-details">คำอธิบายสถานที่ (ไม่น้อยกว่า 50 ตัวอักษร):</label>
+                    <textarea id="place-details" name="placeDetails" rows="6" required minlength="50" placeholder="อธิบายถึงความสำคัญ จุดเด่น หรือกิจกรรมที่สามารถทำได้ ณ สถานที่นี้"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="image-url-1">URL รูปภาพประกอบ :</label>
+                    <input type="url" id="image-url-1" name="imageUrl1" required placeholder="ใส่ลิงก์รูปภาพที่ 1">
+                </div>
+
+             
+                
+
+                <button type="submit" class="submit-button">ส่งคำแนะนำ</button>
+            </form>
+        </section>
+        <footer id="contact">
+        <div class="container">
+            <p>จัดทำโดย: นันท์นภัส กลมเกลี้ยง</p>
+            <p>รหัสประจำตัวนักศึกษา: 673380224-2</p>
+            <p>&copy; 2025 KKU Campus Guide. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
