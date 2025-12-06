@@ -7,6 +7,7 @@ import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/mobileweb/lab02_guide',
   plugins: [
     vue(),
     legacy()
@@ -15,6 +16,10 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+  },
+  build: {
+    outDir: path.resolve(__dirname, '../../docs/lab02_guide'),
+    emptyOutDir: true,
   },
   test: {
     globals: true,
