@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5 - Photo Gallery Display</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 { color: #333; }
+        .info { margin-bottom: 20px; text-align: center; }
+        
+        /* CSS สำหรับ Grid แสดงรูป 4 รูป */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* แสดง 2 คอลัมน์ */
+            gap: 15px;
+            max-width: 1000px;
+            margin-bottom: 30px;
+        }
+        .gallery-item {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 1px;
+            display: block;
+        }
+
+        /* ปุ่มโหลดไฟล์ */
+        .download-btn {
+            background-color: #3880ff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .download-btn:hover {
+            background-color: #3171e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info">
+        <h1>Lab 05: Photo Gallery</h1>
+        <p>โดย นางสาวนันท์นภัส กลมเกลี้ยง รหัส 673380224-2</p>
+    </div>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="../img/l5.png" alt="Photo 1">
+        </div>
+        <div class="gallery-item">
+            <img src="../img/l5-1.png" alt="Photo 2">
+        </div>
+        <div class="gallery-item">
+            <img src="../img/l5-2.png" alt="Photo 3">
+        </div>
+     
+    </div>
+
+    <a href="app-release.apk" class="download-btn" download>ดาวน์โหลดไฟล์โปรเจค (.apk)</a>
+
+</body>
+</html>
