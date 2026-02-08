@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 06: Firestore Database - รายรับรายจ่าย</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'sarabun', sans-serif; }
+        .lab-header { background: linear-gradient(135deg, #0d6efd, #0099ff); color: white; padding: 40px 0; margin-bottom: 30px; }
+        .step-card { margin-bottom: 25px; border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .step-img { width: 100%; border-radius: 8px; border: 1px solid #ddd; margin-top: 15px; cursor: pointer; transition: 0.3s; }
+        .step-img:hover { opacity: 0.8; }
+        .badge-step { font-size: 0.9rem; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="lab-header text-center">
+    <div class="container">
+        <h1>Lab 06: Firestore Database</h1>
+        <p class="lead">การพัฒนาแอปพลิเคชันรายรับ-รายจ่าย ด้วย Ionic และ Firebase</p>
+    </div>
+</div>
+
+<div class="container pb-5">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card step-card">
+                <div class="card-body">
+                    <span class="badge bg-primary badge-step">Step 1-3</span>
+                    <h5 class="card-title">การบันทึกข้อมูล (Create)</h5>
+                    <p class="card-text">ตั้งค่า Firebase และสร้างฟอร์มบันทึกรายรับ-รายจ่าย พร้อมจัดเก็บลง Firestore Database</p>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <p class="text-muted">หน้าจอเพิ่มข้อมูล (Tab 1)</p>
+                            <img src="../img/l6_1.png" alt="หน้าบันทึกข้อมูล" class="step-img">
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <p class="text-muted">ข้อมูลในฐานข้อมูล Firestore</p>
+                            <img src="../img/l6-1-2.png" alt="Firebase Console" class="step-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card step-card">
+                <div class="card-body">
+                    <span class="badge bg-success badge-step">Step 4</span>
+                    <h5 class="card-title">การแสดงผลแบบ Realtime (Read)</h5>
+                    <p class="card-text">ดึงข้อมูลจาก Firestore มาแสดงผลในรูปแบบ List และคำนวณผลรวมรายรับ-รายจ่ายอัตโนมัติ</p>
+                    <div class="row text-center">
+                        <div class="col-md-8 mx-auto">
+                            <p class="text-muted">หน้าประวัติรายการ (Tab 2)</p>
+                            <img src="../img/l6-2.png" alt="หน้าแสดงผล Realtime" class="step-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div class="card step-card">
+                <div class="card-body">
+                    <span class="badge bg-warning badge-step text-dark">Step 5-6</span>
+                    <h5 class="card-title">การแก้ไขและลบข้อมูล (Update & Delete)</h5>
+                    <p class="card-text">เมื่อคลิกรายการจะดึงข้อมูลมาแก้ไขได้ และมีระบบยืนยันการลบข้อมูล (Alert Confirmation)</p>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <p class="text-muted">หน้าแก้ไขข้อมูล (Tab 3)</p>
+                            <img src="../img/l6-3.png" alt="หน้าแก้ไขข้อมูล" class="step-img">
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <p class="text-muted">แก้ไขแล้ว</p>
+                            <img src="../img/l6-4.png" alt="แก้ไขแล้ว" class="step-img">
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <p class="text-muted">การยืนยันการลบ (Delete Alert)</p>
+                            <img src="../img/l6-5.png" alt="กล่องยืนยันการลบ" class="step-img">
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <p class="text-muted">ลบข้อมูลแล้ว</p>
+                            <img src="../img/l6-6.png" alt="ลบข้อมูลแล้ว" class="step-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="../index.html" class="btn btn-secondary">กลับหน้าหลัก</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
