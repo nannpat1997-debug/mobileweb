@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB9 Arm Workout Pro - Summary</title>
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            background-color: #f4f8fb;
+            margin: 0;
+            padding: 40px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px; /* ปรับความกว้างให้พอดีกับ 3 รูป */
+            margin: 2em auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .header {
+            border-bottom: 3px solid #3880ff;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #3880ff;
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .header p {
+            font-weight: bold;
+            color: #666;
+        }
+
+        /* จัดเรียง 3 รูปในแถวเดียว */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 รูปต่อแถว */
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo-item {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e1e8ed;
+            transition: transform 0.2s;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(56, 128, 255, 0.2);
+        }
+
+        .photo-item img {
+            width: 100%;
+            aspect-ratio: 9/16; /* ปรับเป็นแนวตั้งตามหน้าจอมือถือ */
+            object-fit: cover;
+            display: block;
+        }
+
+        .caption {
+            padding: 15px;
+            font-size: 14px;
+            text-align: center;
+            background: #f9f9f9;
+            color: #3880ff;
+            font-weight: bold;
+        }
+
+                .video-section {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .video-section video {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .photo-grid { grid-template-columns: 1fr; } /* มือถือให้โชว์เรียงลงมา */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>LAB9 Arm Workout Pro</h1>
+        <p>By Nannaphat (673380224-2)</p>
+    </div>
+
+    <h2 style="color: #333; text-align: center; margin-bottom: 1.5em;">ผลการทดสอบระบบ</h2>
+
+    <div class="photo-grid">
+        <div class="photo-item">
+            <img src="../img/l9-1.png" alt="หน้าจอเริ่มต้น">
+            <div class="caption">1. หน้าจอเริ่มต้น</div>
+        </div>
+
+        <div class="photo-item">
+            <img src="../img/l9-2.png" alt="ขณะออกกำลังกาย">
+            <div class="caption">2. ขณะออกกำลังกาย</div>
+        </div>
+
+        <div class="photo-item">
+            <img src="../img/l9-3.png" alt="สรุปผลสถิติ">
+            <div class="caption">3. สรุปผลสถิติ</div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; background: #eef4ff; border-radius: 10px; line-height: 1.6;">
+        <h3 style="margin-top: 0; color: #3880ff;">รายละเอียดงาน</h3>
+        <p>พัฒนาระบบนับรอบกายบริหารแขนโดยใช้เซนเซอร์ <b>Accelerometer</b> ตรวจจับการเคลื่อนไหวแบบ Real-time พร้อมระบบ <b>Text-to-Speech (TTS)</b> </p>
+    </div>
+
+    <h2 style="color: #333; text-align: center; margin: 2em 0 1em;">
+    วิดีโอสาธิตการทำงาน
+</h2>
+
+<div class="video-section">
+    <video controls>
+        <source src="../img/video/IMG_3112.mov" type="video/mp4">
+        เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+    </video>
+</div>
+</div>
+
+</body>
+</html>
